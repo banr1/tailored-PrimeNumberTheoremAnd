@@ -1,4 +1,5 @@
 import Architect
+import LeanAtlas.Metadata.Attribute.Meta
 import PrimeNumberTheoremAnd.MellinCalculus
 import PrimeNumberTheoremAnd.ZetaBounds
 import PrimeNumberTheoremAnd.ZetaConj
@@ -3705,7 +3706,8 @@ set_option maxHeartbeats 400000 in
     We have
   $$ \sum_{n \leq x} \Lambda(n) = x + O(x \exp(-c(\log x)^{1/10})).$$
   -/)
-  (proof := /-- Evaluate the integrals. -/)]
+  (proof := /-- Evaluate the integrals. -/),
+  formalMeta "Medium PNT" "ψ(x) = x + O(x exp(-c(log x)^{1/10})): PNT with quantitative error term" mainTheorem]
 theorem MediumPNT : ∃ c > 0,
     (ψ - id) =O[atTop]
       fun (x : ℝ) ↦ x * Real.exp (-c * (Real.log x) ^ ((1 : ℝ) / 10)) := by

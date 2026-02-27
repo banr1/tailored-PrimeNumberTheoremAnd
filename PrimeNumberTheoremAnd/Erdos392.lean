@@ -1,4 +1,5 @@
 import Architect
+import LeanAtlas.Metadata.Attribute.Meta
 import Mathlib.Analysis.SpecialFunctions.Stirling
 import Mathlib.NumberTheory.Bertrand
 import PrimeNumberTheoremAnd.Consequences
@@ -2963,7 +2964,8 @@ lemma pairProd_bound (l : List ℕ) (n : ℕ) (hl : ∀ x ∈ l, x ≤ n) :
   (proof := /-- Group the factorization arising in Theorem \ref{erdos-sol-1} into pairs, using
   Lemma \ref{balance-zero}.-/)
   (latexEnv := "theorem")
-  (discussion := 649)]
+  (discussion := 649),
+  formalMeta "Erdős Problem 392" "n! factors into ≤ n/2 - n/(2 log n) + o(n/log n) numbers each ≤ n²" mainTheorem]
 theorem Solution_2 (ε : ℝ) (hε : ε > 0) :
     ∀ᶠ n in .atTop, ∃ (t : ℕ) (a : Fin t → ℕ), ∏ i, a i = n.factorial ∧ ∀ i, a i ≤ n ^ 2 ∧
         t ≤ (n / 2) - n / (2 * Real.log n) + ε * n / Real.log n := by

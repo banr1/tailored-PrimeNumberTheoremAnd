@@ -1,4 +1,5 @@
 import Architect
+import LeanAtlas.Metadata.Attribute.Meta
 import Mathlib.NumberTheory.Harmonic.Bounds
 import PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic
 import PrimeNumberTheoremAnd.Defs
@@ -898,6 +899,7 @@ theorem pi_alt : ∃ c : ℝ → ℝ, c =o[atTop] (fun _ ↦ (1 : ℝ)) ∧
     have : log x ≠ 0 := by simp_all
     field
 
+@[formalMeta "Prime Number Theorem" "π(x) ~ x/log x: the prime counting function is asymptotic to x/log x" mainTheorem]
 theorem pi_alt' :
     (fun (x : ℝ) ↦ (primeCounting ⌊x⌋₊ : ℝ)) ~[atTop] (fun x ↦ x / log x) := by
   obtain ⟨f, ⟨hf1, hf2⟩⟩ := pi_alt
@@ -1551,7 +1553,8 @@ lemma tendsto_by_squeeze (ε : ℝ) (hε : ε > 0) :
   all sufficiently large $x$. -/)
   (proof := /-- Use Corollary \ref{pi_alt} to show that $\pi((1+\eps)x) - \pi(x)$ goes to infinity
   as $x \to \infty$. -/)
-  (latexEnv := "corollary")]
+  (latexEnv := "corollary"),
+  formalMeta "Bertrand's Postulate (Asymptotic)" "For any ε > 0, a prime exists in (x, (1+ε)x) for large x" mainTheorem]
 theorem prime_between {ε : ℝ} (hε : 0 < ε) :
     ∀ᶠ x : ℝ in atTop, ∃ p : ℕ, Nat.Prime p ∧ x < p ∧ p < (1 + ε) * x := by
   have squeeze := tendsto_by_squeeze (ε/2) (by linarith)
@@ -1951,7 +1954,8 @@ lemma M_isLittleO' : M =o[atTop] id := by
   Sending $\eps \to 0$ we obtain the claim.
   -/)
   (proofUses := ["WeakPNT", "mun"])
-  (latexEnv := "proposition")]
+  (latexEnv := "proposition"),
+  formalMeta "Möbius PNT" "∑ μ(n) for n ≤ x is o(x): PNT equivalent via Möbius function" mainTheorem]
 theorem mu_pnt : (fun x : ℝ ↦ ∑ n ∈ range ⌊x⌋₊, μ n) =o[atTop] fun x ↦ x := by
   have h_moebius_sum : (fun x : ℝ => ∑ n ∈ Finset.range ⌊x⌋₊, (μ n : ℝ)) =o[atTop] (fun x : ℝ => x) := by
     have h_bound : (fun x : ℝ => ∑ n ∈ Finset.range ⌊x⌋₊, (μ n : ℝ)) =o[atTop] (fun x : ℝ => x) := by
@@ -2204,7 +2208,8 @@ lemma sum_mu_div_sq_isLittleO : (fun N : ℕ ↦ ∑ d ∈ Finset.Icc 1 (Nat.sqr
   Sending $\eps \to 0$ we obtain the claim.
   -/)
   (proofUses := ["mu-pnt"])
-  (latexEnv := "proposition")]
+  (latexEnv := "proposition"),
+  formalMeta "Liouville PNT" "∑ λ(n) for n ≤ x is o(x): PNT equivalent via Liouville function" mainTheorem]
 theorem lambda_pnt : (fun x : ℝ ↦ ∑ n ∈ range ⌊x⌋₊, (-1)^(Ω n)) =o[atTop] fun x ↦ x := by
   have h_lambda_pnt : (fun N : ℕ => ∑ n ∈ Finset.range N, (-1 : ℝ) ^ (Nat.factorization n).sum (fun p k => k)) =o[Filter.atTop] (fun N : ℕ => (N : ℝ)) := by
     have h_lambda_pnt : (fun N : ℕ => ∑ n ∈ Finset.Icc 1 N, (-1 : ℝ) ^ (Nat.factorization n).sum (fun p k => k)) =o[Filter.atTop] (fun N : ℕ => (N : ℝ)) := by
@@ -2513,7 +2518,8 @@ theorem chebyshev_asymptotic_pnt
   would be bounded in $x$, contradicting Theorem \ref{chebyshev-asymptotic-pnt}.
   -/)
   (proofUses := ["chebyshev-asymptotic-pnt"])
-  (latexEnv := "corollary")]
+  (latexEnv := "corollary"),
+  formalMeta "Dirichlet's Theorem" "Infinitely many primes in any coprime residue class" mainTheorem]
 theorem dirichlet_thm {q : ℕ} {a : ℕ} (hq : q ≥ 1) (ha : Nat.Coprime a q) (ha' : a < q) :
     Infinite { p // p.Prime ∧ p % q = a } := by
   have : {p | p.Prime ∧ p % q = a}.Infinite := by

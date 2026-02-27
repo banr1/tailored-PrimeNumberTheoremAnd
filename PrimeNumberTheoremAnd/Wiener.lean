@@ -1,4 +1,5 @@
 import Architect
+import LeanAtlas.Metadata.Attribute.Meta
 import Mathlib.Analysis.Fourier.RiemannLebesgueLemma
 import Mathlib.Analysis.Normed.Group.Tannery
 import Mathlib.Analysis.SumIntegralComparisons
@@ -2434,7 +2435,8 @@ blueprint_comment /--
     We have
   $$ \sum_{n \leq x} \Lambda(n) = x + o(x).$$
   -/)
-  (proof := /-- Already done by Stoll, assuming Wiener-Ikehara. -/)]
+  (proof := /-- Already done by Stoll, assuming Wiener-Ikehara. -/),
+  formalMeta "Weak Prime Number Theorem" "ψ(x)/x → 1: the Chebyshev psi function is asymptotic to x" mainTheorem]
 theorem WeakPNT : Tendsto (fun N ↦ cumsum Λ N / N) atTop (𝓝 1) := by
   let F := vonMangoldt.LFunctionResidueClassAux (q := 1) 1
   have hnv := riemannZeta_ne_zero_of_one_le_re
@@ -4008,7 +4010,8 @@ lemma summable_vonMangoldt_div_rpow {s : ℝ} (hs : 1 < s) : Summable (fun n ↦
   -/)
   (proof := /-- Apply Theorem \ref{WienerIkehara} (or Theorem \ref{WienerIkehara2} to avoid
   checking the Chebyshev condition) using Proposition \ref{WeakPNT-AP-prelim}.-/)
-  (proofUses := ["WienerIkehara", "WeakPNT-AP-prelim"])]
+  (proofUses := ["WienerIkehara", "WeakPNT-AP-prelim"]),
+  formalMeta "PNT in Arithmetic Progressions" "Λ restricted to a mod q has average 1/φ(q)" mainTheorem]
 theorem WeakPNT_AP {q : ℕ} {a : ℕ} (hq : q ≥ 1) (ha : a.Coprime q) (ha' : a < q) :
     Tendsto (fun N ↦ cumsum (fun n ↦ if n % q = a then Λ n else 0) N / N) atTop (𝓝 (1 / q.totient)) := by
   have h_summable : ∀ s : ℝ, 1 < s → Summable (fun n ↦ (if n % q = a then Λ n else 0) / n ^ s) := by
