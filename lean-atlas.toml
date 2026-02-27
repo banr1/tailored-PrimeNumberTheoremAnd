@@ -1,0 +1,168 @@
+[project]
+name = "PrimeNumberTheoremAnd"
+namespace = "PrimeNumberTheoremAnd"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Auxiliary"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BKLNW"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BKLNW_a2_bounds"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BKLNW_app"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BKLNW_app_tables"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BKLNW_tables"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BorelCaratheodory"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.BrunTitchmarsh"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Buthe"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.CH2"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Chebyshev"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Consequences"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.CostaPereira"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Defs"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.DerivativeBound"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Dusart"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Erdos392"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.eSHP"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.eSHP_tables"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.FKS2"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.FioriKadiriSwidinsky"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Fourier"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.GeneralMeromorphic"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Goldbach"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.HadamardFactorization"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.HoffsteinLockhart"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.KLN"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Lcm"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Li2Bounds"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.MediumPNT"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.MellinCalculus"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.MobiusLemma"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.PerronFormula"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.PrimeInInterval"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.PrimaryDefinitions"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.PrimarySummary"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Ramanujan"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Rectangle"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.ResidueCalcOnRectangles"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.RosserSchoenfeldPrime"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.RosserSchoenfeldPrime_tables"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.RosserSchoenfeldZeta"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.SecondaryDefinitions"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.SecondarySummary"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.SmoothExistence"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Sobolev"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.StrongPNT"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.Wiener"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.ZetaAppendix"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.ZetaBounds"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.ZetaConj"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.ZetaDefinitions"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.ZetaSummary"
+
+[[modules]]
+name = "PrimeNumberTheoremAnd.IwaniecKowalskiCh1"
+
+[atlas]
+root = "../lean-atlas"

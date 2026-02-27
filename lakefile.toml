@@ -31,5 +31,9 @@ name = "leancert"
 git = "https://github.com/alerad/leancert"
 rev = "v4.28.1"
 
+[[require]]
+name = "lean-atlas"
+path = "../lean-atlas"
+
 [[lean_lib]]
 name = "PrimeNumberTheoremAnd"
