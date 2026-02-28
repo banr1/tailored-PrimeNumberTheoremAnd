@@ -33,7 +33,7 @@ rev = "v4.28.1"
 
 [[require]]
 name = "lean-atlas"
-path = "../lean-atlas"
+path = "../lean-atlas-for-PrimeNumberTheoremAnd"
 
 [[lean_lib]]
 name = "PrimeNumberTheoremAnd"

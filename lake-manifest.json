@@ -6,7 +6,7 @@
    "name": "«lean-atlas»",
    "manifestFile": "lake-manifest.json",
    "inherited": false,
-   "dir": "../lean-atlas",
+   "dir": "../lean-atlas-for-PrimeNumberTheoremAnd",
    "configFile": "lakefile.toml"},
   {"url": "https://github.com/alerad/leancert",
    "type": "git",
