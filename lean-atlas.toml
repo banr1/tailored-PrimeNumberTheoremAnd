@@ -165,4 +165,4 @@ name = "PrimeNumberTheoremAnd.ZetaSummary"
 name = "PrimeNumberTheoremAnd.IwaniecKowalskiCh1"
 
 [atlas]
-root = "../lean-atlas-for-PrimeNumberTheoremAnd"
+root = "../lean-atlas"
