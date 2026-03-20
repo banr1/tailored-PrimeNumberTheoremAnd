@@ -1,6 +1,0 @@
-[project]
-name = "PrimeNumberTheoremAnd"
-namespace = "PrimeNumberTheoremAnd"
-
-[atlas]
-root = "../lean-atlas"
